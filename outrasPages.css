@@ -7,12 +7,19 @@
     font-family: 'Rubik', sans-serif;
 }
 
+body {
+    text-align: center;
+    height: 100vh;
+}
+
 header{
-    height: 101px;
+    height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
+
 
 
 .logo > a img{
@@ -40,40 +47,8 @@ header{
 .icone-link{
     width: 15px;
 }
-
-main{
-background-color: rgb(255, 255, 255);
-height: 100vh;
-}
-
-footer{
-    display: flex;
-    background-color: rgb(0, 1, 69);
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-}
-
-footer > p{
-    margin: 0;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-footer p > a{
-    margin: 0;
-    text-decoration: none;
-    color: rgb(199, 244, 255);
-    border-radius: 2px;
-}
-
-body {
-    text-align: center;
-}
-  
   
 main {
-    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -83,7 +58,7 @@ main {
 
 .meio {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
     margin: 0;
@@ -95,13 +70,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0f97c1d7;
     box-shadow: 0px 5px 10px 0px;
+    
 }
 
 .form-info > img{
-width: 100v;
-height: 100vh;
+    height: 100%;
 }
 
 .form {
@@ -112,6 +86,11 @@ height: 100vh;
     align-items: center;
     background-color: #fff;
     padding: 3rem;
+    overflow: auto;
+}
+
+form{
+    height: 100%;
 }
 
 .form-header {
@@ -143,6 +122,10 @@ height: 100vh;
     color: #fff;
 }
 
+.form-header{
+    margin-bottom: 20px;
+}
+
 .form-header h1::after {
     content: '';
     display: block;
@@ -159,6 +142,7 @@ height: 100vh;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem 0;
+   
 }
 
 .input-box {
@@ -218,7 +202,7 @@ height: 100vh;
 }
 
 .idd{
-background-color: blue;
+margin-bottom: 30px;
 }
 
 .numb-idade{
@@ -226,7 +210,7 @@ background-color: blue;
     padding: 0;
 }
 
-.continue-button button {
+.enviar-button button {
     width: 100%;
     margin-top: 2.5rem;
     border: none;
@@ -234,19 +218,41 @@ background-color: blue;
     padding: 0.62rem;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 40px;
 }
 
-.continue-button button:hover {
+.enviar-button button:hover {
     background-color: #6b63fff1;
 }
 
-.continue-button button a {
+.enviar-button button a {
     text-decoration: none;
     font-size: 0.93rem;
     font-weight: 500;
     color: #fff;
 }
 
+
+footer{
+    display: flex;
+    background-color: rgb(0, 1, 69);
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+footer > p{
+    margin: 0;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+footer p > a{
+    margin: 0;
+    text-decoration: none;
+    color: rgb(199, 244, 255);
+    border-radius: 2px;
+}
 
 
 
