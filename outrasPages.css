@@ -28,7 +28,7 @@ header{
 .navbar{
     background-image: linear-gradient(to left, rgb(59, 205, 210), rgb(17, 55, 130));
     background-color: rgb(104, 240, 240);
-    box-shadow: 0px 5px 10px 0px;
+    box-shadow: 0px 1px 2px 0px;
 }
 
 .nav-tot >{
@@ -87,6 +87,7 @@ main {
     display: flex;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
     margin: 0;
+    
 }
 
 .form-info {
@@ -95,7 +96,12 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #0f97c1d7;
-    
+    box-shadow: 0px 5px 10px 0px;
+}
+
+.form-info > img{
+width: 100v;
+height: 100vh;
 }
 
 .form {
@@ -234,12 +240,7 @@ main {
 
 
 @media screen and (max-width: 1330px) {
-    .form-image {
-        display: none;
-    }
-    .meio {
-        width: 50%;
-    }
+    
     .form {
         width: 100%;
     }
@@ -247,11 +248,12 @@ main {
 
 
 
-@media screen and (max-width: 1064px) {
+@media screen and (max-width: 970px) {
     .meio {
-        width: 90%;
+        flex-direction: column;
         height: auto;
     }
+   
     .input-group {
         flex-direction: column;
         z-index: 5;
