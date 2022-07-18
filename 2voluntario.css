@@ -27,11 +27,6 @@ header{
     display: block;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-}
-
 .logo > a img{
     height: 90px;
     
@@ -84,6 +79,7 @@ main {
     
 }
 
+
 .form-info > img{
     height: 100%;
 }
@@ -102,7 +98,7 @@ main {
 
 
 .form {
-    max-width: 800px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -113,9 +109,14 @@ main {
     
 }
 
-
 form{
     height: 100%;
+}
+
+.coont-form{
+    height: 100%;
+    max-width:650px;
+    background-color: #ffffff;
 }
 
 .login-button {
