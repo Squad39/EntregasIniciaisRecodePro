@@ -5,7 +5,12 @@
     padding: 0;
     font-family: 'Roboto Slab', serif;
     font-family: 'Rubik', sans-serif;
+
 }
+
+html, body {
+    height: 100%;
+  }
 
 body {
     text-align: center;
@@ -18,9 +23,19 @@ header{
     justify-content: space-around;
     align-items: center;
 }
+.tudo{
+    display: block;
+}
 
+main{
+    display: flex;
+    flex-direction: column;
+    height: 8000px;
+}
 
+footer{
 
+}
 
 .logo > a img{
     height: 90px;
@@ -38,7 +53,7 @@ header{
     box-shadow: 0px 1px 2px 0px;
 }
 
-.nav-tot >{
+.nav-tot > {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,7 +65,7 @@ header{
   
 main {
     height: 100vh;
-    /*display: flex;*/
+    display: flex;
     justify-content: center;
     align-items: center;
     background: #0c0ce94d;
@@ -90,8 +105,15 @@ main {
     text-align: justify;
 }
 
+.coont-form{
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .form {
-    width: 50%;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -284,8 +306,13 @@ footer p > a{
     border-radius: 2px;
 }
 
+.foot-dentro{
+    display: none;
+}
+
 
 @media screen and (max-width: 970px) {
+   
     .meio {
         flex-direction: column;
         width: 100%;
@@ -315,7 +342,14 @@ footer p > a{
     text-align: justify;
 }
 
-   
+.foot-fora{
+    display: none;
+}
+
+.foot-dentro{
+    display: block;
+    padding: 20px;
+}
 
     .gender-inputs {
         margin-top: 2rem;
