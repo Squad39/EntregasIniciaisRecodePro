@@ -48,6 +48,18 @@ header{
     align-items: center;
 }
 
+.icone-link{
+    width: 19px;
+    margin: 20px;
+}
+
+.mvv-cont{
+    width: 80%;
+    margin: auto;
+}
+.mvv-cont > p {
+    text-align: justify;
+}
 
 footer{
     display: flex;
