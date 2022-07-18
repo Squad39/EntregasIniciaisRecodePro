@@ -30,11 +30,6 @@ header{
 main{
     display: flex;
     flex-direction: column;
-    height: 8000px;
-}
-
-footer{
-
 }
 
 .logo > a img{
@@ -77,7 +72,7 @@ main {
     display: flex;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
     margin: 0;
-    
+
 }
 
 .form-info {
@@ -105,12 +100,6 @@ main {
     text-align: justify;
 }
 
-.coont-form{
-    background-color: #ffffff;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
 
 .form {
     max-width: 800px;
@@ -121,7 +110,9 @@ main {
     background-color: #fff;
     padding: 3rem;
     overflow: auto;
+    
 }
+
 
 form{
     height: 100%;
@@ -312,11 +303,11 @@ footer p > a{
 
 
 @media screen and (max-width: 970px) {
-   
     .meio {
         flex-direction: column;
         width: 100%;
     }
+   
     .form-info{
         width: 100%;
     }
@@ -347,8 +338,10 @@ footer p > a{
 }
 
 .foot-dentro{
-    display: block;
+    display: flex;
     padding: 20px;
+    text-align: center;
+    justify-content: center;
 }
 
     .gender-inputs {
