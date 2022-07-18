@@ -65,6 +65,13 @@
       <div class="meio">
         <div class="form-info">
           <img src="fotos/education-g0d2b4af0b_1920.jpg" alt="">
+          <div class="infdoform"><p>QUEM ? <br>Buscamos voluntários estudantes de nível superior, proximos a Olho d'água do casado Que possam se disponilizar a dar aulas presenciais por um período definido este pela própria pessoa voluntária em um espaço cedido por um morador ou instituição local (Escola, CRAs, Igrejas e espaços sociais.) <br>
+<br>
+            Pedimos que o voluntário esteja em formação academica, em qualquer área e tenha amor em transmitir em conhecimento e sonhe com um futuro melhor.
+            Emitimos uma declaração para que o estudante possa apresentar em sua faculdade ou universidade, para créditos estudantis como voluntário.
+            
+            Os recursos são doados atráves do site.
+            </p></div>
         </div>
         <div class="form">
           <form action="#">
@@ -108,16 +115,26 @@
                 <input id="cttfacul" type="text" name="faculdade" placeholder="Digite o Email da facul" required>
               </div>
               <div class="input-box">
-                <label for="desc">Descrição</label>
-                <input id="desc" type="text" name="descricao" placeholder="Digite a sua Formação" required>
-              </div>
-  
-  
-              <div class="input-box">
                 <label for="cttTrb">Contato de trabalho</label>
                 <input id="cttTrb" type="text" name="ctttrabalho" placeholder="Digite o seu Email de trabalho" required>
               </div>
-  
+
+              <div class="input-box">
+                <label for="disp">Disponibilidade</label>
+                <div class="disp">
+                  <label for="disp">De</label>
+                  <input id="disp" type="date" name="descricao" placeholder="" required>
+                  <label for="disp">até</label>
+                  <input id="disp" type="date" name="descricao" placeholder="" required>
+                </div>
+                
+                
+              </div>
+
+              <div class="input-box mb-3">
+                <label  for="exampleFormControlTextarea1" class="form-label">Nos Fale sobre você</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Nos conte a sua historia..." rows="3"></textarea>
+              </div>
             </div>
   
             <div class="idd">
@@ -127,7 +144,7 @@
                 </div>
                 <input type="range" class="form-range" min="0" max="3" id="customRange2">
   
-                <div class="gender-group numb-idade">
+                <div class="gender-groupidd gender-group numb-idade">
                   <div class="gender-input">
                     <label for="idd">18+</label>
                   </div>
@@ -171,7 +188,7 @@
                 </div>
   
                 <div class="gender-input">
-                  <input id="none" type="radio" name="gender">
+                  <input id="none" type="radio" name="gender" checked>
                   <label for="none">Prefiro não dizer</label>
                 </div>
               </div>
