@@ -75,10 +75,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 5px 10px 0px;
     
 }
-
 
 .form-info > img{
     height: 100%;
@@ -329,7 +327,7 @@ footer p > a{
     border-radius:0px;
     padding: 5px;
     box-shadow: 0px 0px 10px #00000078;
-    font-size: 14px;
+    font-size: 15.4px;
     color: black;
     text-align: justify;
 }
