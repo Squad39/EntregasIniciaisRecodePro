@@ -55,8 +55,8 @@ main{
     background-image: linear-gradient(to top, rgba(59, 205, 210, 0.604), rgba(17, 55, 130, 0.664));
     padding: 20px;
     max-width: 1300px;
-    font-size: max(1.2em); 
     font-size: min(1.1em);
+    font-size: max(1.2em); 
 }
 
 .info, .mvv-cont{
@@ -76,7 +76,7 @@ h2{
     margin: 0;
     background-image: linear-gradient(to left, aliceblue, rgba(69, 156, 175, 0.664));
     padding-left: 40px;
-    width: 500px;
+    max-width: 500px;
     border-radius: 20px;
 }
 
