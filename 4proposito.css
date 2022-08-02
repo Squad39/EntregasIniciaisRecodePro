@@ -56,7 +56,7 @@ main{
     padding: 20px;
     max-width: 1300px;
     font-size: max(1.2em); 
-    
+    font-size: min(1.1em);
 }
 
 .info, .mvv-cont{
@@ -68,6 +68,17 @@ main{
     max-width: 1250px;
 }
 
+.mvv{
+    margin-bottom: 20px;
+}
+
+h2{
+    margin: 0;
+    background-image: linear-gradient(to left, aliceblue, rgba(69, 156, 175, 0.664));
+    padding-left: 40px;
+    width: 500px;
+    border-radius: 20px;
+}
 
 footer{
     display: flex;
