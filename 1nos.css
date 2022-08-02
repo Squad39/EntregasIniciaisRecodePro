@@ -74,7 +74,12 @@ body {
     text-align: center;
 }
   
-main{margin: 20px;padding: 20px 100px; text-align: justify; font-size: 1.3em; text-indent: 5%;}
+main{margin: 20px;
+    padding: 20px 100px; 
+    text-align: justify; 
+    font-size: 1.3em; 
+    text-indent: 5%;
+}
 
 .Container{
     height: 150px;

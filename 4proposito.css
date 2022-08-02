@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500&family=Rubik:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
-
-*{
+*, body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto Slab', serif;
@@ -20,8 +19,6 @@ header{
     height: 90px;
     
 }
-
-
 
 .frase-head{
     text-align: center;
@@ -49,18 +46,28 @@ header{
     align-items: center;
 }
 
-.icone-link{
-    width: 19px;
-    margin: 20px;
+main{
+    align-items: center;
 }
 
-.mvv-cont{
-    width: 80%;
+#tdinf{
     margin: auto;
+    background-image: linear-gradient(to top, rgba(59, 205, 210, 0.604), rgba(17, 55, 130, 0.664));
+    padding: 20px;
+    max-width: 1300px;
+    font-size: max(1.2em); 
+    
 }
-.mvv-cont > p {
-    text-align: justify;
+
+.info, .mvv-cont{
+    background-color: aliceblue;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 1250px;
 }
+
 
 footer{
     display: flex;
@@ -83,27 +90,11 @@ footer p > a{
     border-radius: 2px;
 }
 
-body {
-    text-align: center;
-}
-  
-  
-
-.Container{
-    height: 150px;
-    width: 250px;
-    overflow-y: auto;
-    background-color: green;
-    border-radius: 5px;
-    margin: 0 auto;
+h4, p {
+    margin: 0;
+    padding: 0;
 }
 
-.Content{
-    height: 200px;
-    color: white;
-    text-align: center;
-}
-  
 ::-webkit-scrollbar {
     width: 6px;
 }
