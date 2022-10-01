@@ -54,7 +54,7 @@ main{
     margin: auto;
     background-image: linear-gradient(to top, rgba(59, 205, 210, 0.604), rgba(17, 55, 130, 0.664));
     padding: 20px;
-    max-width: 1300px;
+    max-width: 1500px;
     font-size: min(1.1em);
     font-size: max(1.2em); 
 }
