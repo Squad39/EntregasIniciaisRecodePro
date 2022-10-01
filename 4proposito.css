@@ -14,6 +14,10 @@ header{
     align-items: center;
 }
 
+#info{
+    padding: 0;
+    margin: 0;
+}
 
 .logo > a img{
     height: 90px;
