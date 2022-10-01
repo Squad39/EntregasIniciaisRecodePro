@@ -130,6 +130,14 @@ main{margin: 20px;
         margin-top: 10px;
     }
 
+    main {
+        margin: 20px;
+        padding: 20px 10px;
+        text-align: justify;
+        font-size: 1.2em;
+        text-indent: 5%;
+    }
+
     .logo > a img{
         height: 90px;
         
