@@ -10,6 +10,6 @@ tipoDoacao text,
 telContato VARCHAR(11),
 email VARCHAR(30),
 senha VARCHAR(10),
-id_Apoiador INTEGER PRIMARY KEY
+id_Apoiador INTEGER PRIMARY KEY auto_increment
 );
 
