@@ -115,7 +115,7 @@ main {
     left: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(http://127.0.0.1:5500/fotos/apoiadores.jpg);
+    background-image: url(./fotos/apoiadores.jpg);
 }
 
 

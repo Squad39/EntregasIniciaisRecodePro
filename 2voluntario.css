@@ -107,7 +107,7 @@ main {
     left: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(http://127.0.0.1:5500/fotos/education-g0d2b4af0b_1920.jpg);
+    background-image: url(./fotos/education-g0d2b4af0b_1920.jpg) ;
 }
 
 .infdoform__text {
