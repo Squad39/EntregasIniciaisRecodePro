@@ -15,10 +15,10 @@ public class ApoiadorDAO {
 	Connection conn = null;
 	PreparedStatement pstm = null;
 
-	public void save(Cliente c1) {
+	public void save(Apoiador ap1) {
 		// metodo de salvar
 
-		String sql = "INSERT INTO Cliente(nome,cpf,endereco)" + "VALUES(?,?,?)";
+		String sql = "INSERT INTO Cliente(dataNasc,nome, telefone,tipoDoacao,telContato,email,senha)" + "VALUES(?,?,?,?,?,?,?)";
 		// interrogação será substituida pelos parametros inseridos
 
 		// testa se a conexão ainda não existe
@@ -32,9 +32,13 @@ public class ApoiadorDAO {
 
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setString(1, c1.getNome());
-			pstm.setString(2, c1.getCpf());
-			pstm.setString(3, c1.getEndereco());
+			pstm.setString(1, ap1.getNome());
+			pstm.setString(2, ap1.getTipoDoacao());
+			pstm.setString(3, ap1.getTelContato());
+			pstm.setString(4, ap1.getEmail());
+			pstm.setString(5, ap1.getDataNasc());
+			pstm.setString(6, ap1.getId_Apoiador());
+			pstm.setString(7, ap1.getSenha());
 
 			// executar a inserção de dados
 			pstm.execute();
@@ -56,14 +60,14 @@ public class ApoiadorDAO {
 
 	}
 
-	public void removebyId(int Id_cliente) {
-		String sql = "DELETE FROM Cliente WHERE Id_cliente = ?";
+	public void removebyId(int id_Apoiador) {
+		String sql = "DELETE FROM Cliente WHERE Id_ = ?";
 		try {
 			conn = ConnectionFactory.creatConnectiontoMySQL();
 
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setInt(1, Id_cliente);
+			pstm.setInt(1, id_Apoiador);
 
 			pstm.execute();
 
@@ -85,52 +89,68 @@ public class ApoiadorDAO {
 
 	}
 
-	public void update(Cliente cliente) {
-		String sql = "UPDATE Cliente SET Nome = ?, Cpf = ?, Endereco = ?" + "WHERE Id_cliente = ?";
+	public void update(Apoiador ap1) {
+		String sql = "UPDATE Apoaidor SET Nome = ?, dataNasc = ?, telefone = ?, tipoDoacao = ?, telContato = ?, email = ?, senha =?" + "WHERE Id_Apoiador = ?";
 		try {
 			conn = ConnectionFactory.creatConnectiontoMySQL();
 
 			pstm = conn.prepareStatement(sql);
 
-			// primeiro parametro (nome) da tabela (cliente) do banco
-			pstm.setString(1, cliente.getNome());
-			// segundo parametro (cpf) da tabela (cliente) do banco
+			// primeiro parametro (nome) da tabela (Apoiador) do banco
+			pstm.setString(1, ap1.getNome());
 
-			pstm.setString(2, cliente.getCpf());
-			// terceiro parametro (endereco) da tabela (cliente) do banco
+			pstm.setString(2, ap1.getDataNasc());
+			// segundo parametro (telefone) da tabela (Apoiador) do banco
 
-			pstm.setString(3, cliente.getEndereco());
-			// quatro parametro (Id_cliente) da tabela (cliente) do banco
+			pstm.setString(3, ap1.getTelefone());
+			// terceiro parametro (tipoDoacao) da tabela (Apoiador) do banco
 
-			// para que não seja alterado todas as linhas da tabela
-			pstm.setInt(4, cliente.getId_cliente());
 
-			pstm.execute();
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			// fechar as conexoes
-			try {
-				if (pstm != null) {
-					pstm.close();
-				}
-				if (conn != null) {
-					conn.close();
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
+			pstm.setString(3, ap1.getTipoDoacao());
+			// quatro parametro (tipoDoacao) da tabela (Apoiador) do banco
 
-	}
+			pstm.setString(4, ap1.getTelContato());
+			// quinto parametro (telContato) da tabela (Apoiador) do banco
 
-	public  List<Cliente> getClientes() {
+			pstm.setString(5, ap1.getEmail());
+			// sexto parametro (email) da tabela (Apoiador) do banco
 
-		String sql = "SELECT * FROM Cliente";
+			pstm.setString(6, ap1.getSenha());
+			// setimo parametro (tipoDoacao) da tabela (Apoiador) do banco
 
-		List<Cliente> clienteLista = new ArrayList<Cliente>();
 		
-		// classe que vai recuperar e mostrar os dados do banco Viajemais ( Tabela Clientes)
+			// para que não seja alterado todas as linhas da tabela
+			pstm.setInt(4, ap1.getId_Apoiador());
+
+			pstm.execute();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// fechar as conexoes
+			try {
+				if (pstm != null) {
+					pstm.close();
+				}
+				if (conn != null) {
+					conn.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	/**
+	 * @return
+	 */
+	public  List<Apoiador> getApoiador() {
+
+		String sql = "SELECT * FROM Apoiador";
+
+		List<Apoiador> apoiadorLista = new ArrayList<Apoiador>();
+		
+		// classe que vai recuperar e mostrar os dados do banco Apoiador
 		ResultSet rset = null;
 		try {
 			conn = ConnectionFactory.creatConnectiontoMySQL();
@@ -140,22 +160,29 @@ public class ApoiadorDAO {
 			// enquanto houver dados no banco faça
 
 			while (rset.next()) {
-				Cliente cliente = new Cliente();
+				Apoiador ap1 = new Apoiador();
 
 				// recupera o Id do banco e atribui ao objeto
-				cliente.setId_cliente(rset.getInt("Id_cliente"));
+				ap1.setId_Apoiador(0); (rset.getInt("id_Apoiador"));
 				
 				// recupera o nome do banco e atribui ao objeto
-				cliente.setNome(rset.getString("Nome"));
+				ap1.setNome(rset.getString("Nome"));
 				
-				// recupera o endereco e atribui nesse o objeto
-				cliente.setEndereco(rset.getString("Endereco"));
+				// recupera o dataNasc e atribui nesse o objeto
+				ap1.setDataNasc(rset.getString("dataNasc"));
 				
-				//recupera o CPF e atribui ao objeto 
-				cliente.setCpf(rset.getString("Cpf"));
+				//recupera o email e atribui ao objeto 
+				ap1.setEmail(rset.getString("email"));
+
+				//recupera a senha e atribui ao objeto 
+				ap1.setSenha(rset.getString("senha"));
+
+				//recupera o telefone e atribui ao objeto 
+				ap1.setTelefone(rset.getString("telefone"));
+
 				
 				// Adiciono o Cliente recuperado, a lista de clientes
-				clienteLista.add(cliente);
+				apoiadorLista.add(ap1);
 
 			}
 
@@ -174,27 +201,32 @@ public class ApoiadorDAO {
 				e.printStackTrace();
 			}
 		}
-		return clienteLista;
+		return apoiadorLista;
  
 	}
 	
-	public Cliente buscaById(int Id_cliente) {
-		String sql = "SELECT * FROM Cliente WHERE id IN (?);";
+	public Apoiador buscaById(int Id_Apoiador) {
+		String sql = "SELECT * FROM Apoiador WHERE id IN (?);";
 		ResultSet rset = null;
-		Cliente cliente = new Cliente();
+		Apoiador ap1 = new Apoiador();
 
 		try {
 			conn = ConnectionFactory.creatConnectiontoMySQL();
 			pstm = conn.prepareStatement(sql);
-			pstm.setInt(1, Id_cliente);
+			pstm.setInt(1, Id_Apoiador);
 
 			rset = pstm.executeQuery();
 
 			rset.next();
-			cliente.setId(rset.getInt("Id_cliente"));
-			cliente.setNome(rset.getString("Nome"));
-			cliente.setCpf(rset.getString("Cpf"));
-			cliente.setEndereco(rset.getString("Endereço"));
+			ap1.setId(rset.getInt("Id_Apoiador"));
+			ap1.setNome(rset.getString("Nome"));
+			ap1.setDataNasc(rset.getString("dataNasc"));
+			ap1.setTelContato(rset.getString("telefone"));
+			ap1.setTipoDoacao(rset.getString("tipoDoacao"));
+			ap1.setEmail(rset.getString("email"));
+			ap1.setTelContato(rset.getString("telContato"));
+
+
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -216,14 +248,10 @@ public class ApoiadorDAO {
 			}
 
 		}
-		return cliente;
+		return ap1;
 	}
 
-	public static void removeById(int id_cliente) {
-	}
+}
 
 	
-}
-	
 
-}

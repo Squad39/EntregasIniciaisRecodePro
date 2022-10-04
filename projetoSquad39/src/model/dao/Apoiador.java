@@ -3,6 +3,14 @@ package projetoSquad39;
 import java.util.List;
 
 public class Apoiador {
+	private int dataNasc;
+	private String nome;
+	private String telefone;
+	private String tipoDoacao;
+	private String telContato;
+	private String email;
+
+	
 	private int id_Apoiador;
 	public int getId_Apoiador() {
 		return id_Apoiador;
@@ -52,13 +60,7 @@ public class Apoiador {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	private int dataNasc;
-	private String nome;
-	private String telefone;
-	private String tipoDoacao;
-	private String telContato;
-	private String email;
-	private String senha;
+
 	
 
 }
