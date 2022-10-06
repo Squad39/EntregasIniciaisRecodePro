@@ -1,1 +1,0 @@
-INDEX VERSION 1.131+C:\Users\Remakker\Documents\Projeto Squad\projetoSiteEntrega1Recode\projetoSquad39\.metadata\.plugins\org.eclipse.jdt.core
